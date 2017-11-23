@@ -29,19 +29,7 @@ var app = {
     onDeviceReady: function() {
         //this.receivedEvent('deviceready');
 		
-									navigator.camera.getPicture(onSuccess, onFail,
-							{
-								destinationType: Camera.DestinationType.FILE_URI,
-								sourceType: Camera.PictureSourceType.PHOTOLIBRARY,
-								popoverOptions: new CameraPopoverOptions(300, 300, 100, 100, Camera.PopoverArrowDirection.ARROW_ANY)
-							});
-
-							// Reposition the popover if the orientation changes.
-							window.onorientationchange = function() {
-								var cameraPopoverHandle = new CameraPopoverHandle();
-								var cameraPopoverOptions = new CameraPopoverOptions(0, 0, 100, 100, Camera.PopoverArrowDirection.ARROW_ANY);
-								cameraPopoverHandle.setPosition(cameraPopoverOptions);
-							}
+							
 		
         init();
     },
